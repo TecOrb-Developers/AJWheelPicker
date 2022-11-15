@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pickerview_bg_topbar">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/pickerview_topbar_title"
+        android:textSize="@dimen/pickerview_topbar_title_textsize" />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical|start"
+        android:layout_marginStart="@dimen/pickerview_topbar_paddingleft"
+        android:textDirection="ltr"
+        android:text="@string/pickerview_cancel"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical|end"
+        android:layout_marginRight="@dimen/pickerview_topbar_paddingleft"
+        android:text="@string/pickerview_submit"
+
+        android:paddingRight="10dp"
+        android:textDirection="ltr"
+        android:textColor="@color/colorBlue"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:id="@+id/llHourMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:visibility="gone"
+        android:background="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancel">
+
+        <TextView
+            android:id="@+id/tvHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hour"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvMin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Min"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvSpace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/pickerview_topbar_paddingleft">
+        </TextView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
