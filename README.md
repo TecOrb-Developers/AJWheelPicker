@@ -9,12 +9,9 @@
 ![This is an image](https://s4.aconvert.com/convert/p3r68-cdx67/a3agx-3tnyn.jpg)
 ![This is an image](https://s4.aconvert.com/convert/p3r68-cdx67/aicii-57905.jpg)
 
-#How to Use
-
-        singleTVOptions:TextView = findViewById<View>(R.id.tvsingleOptions) as TextView
-
+### How to Use
+~~~  singleTVOptions:TextView = findViewById<View>(R.id.tvsingleOptions) as TextView 
        singleTVOptions!!.setOnClickListener { singlePicker?.show() }
-
        MyOptionsPickerView singlePicker = MyOptionsPickerView(this@MainActivity)
         val items = ArrayList<String>()
         items.add("A")
@@ -45,9 +42,10 @@
         singlePicker?.setCancelButtonTextColor(resources.getColor(com.wheelPicker.R.color.colorBlue))
         singlePicker?.setSubmitButtonTypeFace(ResourcesCompat.getFont(this, R.font.poppins_regular))
         singlePicker?.setCustomFont(ResourcesCompat.getFont(this, R.font.poppins_medium)!!)
-
         singlePicker?.setOnoptionsSelectListener(object :MyOptionsPickerView.OnOptionsSelectListener {
             override fun onOptionsSelect(options1: Int, option2: Int, options3: Int) {
                 Toast.makeText(this@MainActivity, "" + items[options1], Toast.LENGTH_SHORT).show()
             }
         })
+  
+  ~~~
