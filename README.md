@@ -10,6 +10,29 @@
 ![This is an image](https://s4.aconvert.com/convert/p3r68-cdx67/aicii-57905.jpg)
 
 ### How to Use
+
+Step 1. Add it in your root build.gradle at the end of repositories:
+```allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+```
+
+~~~
+
+Step 2. Add the dependency
+dependencies {
+	        implementation 'com.github.TecOrb-Developers:AJWheelPicker:-SNAPSHOT'
+	}
+       
+~~~       
+
+
+Step 3 .
+
 ~~~  singleTVOptions:TextView = findViewById<View>(R.id.tvsingleOptions) as TextView 
        singleTVOptions!!.setOnClickListener { singlePicker?.show() }
        MyOptionsPickerView singlePicker = MyOptionsPickerView(this@MainActivity)
